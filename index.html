@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Letter to You 💖</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+        background: linear-gradient(180deg, #ffe6f0, #fff);
+        color: #5a2a4a;
+        overflow-x: hidden;
+      }
+
+      .valentine {
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      .valentine h2 {
+        font-family: "Pacifico", cursive;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .buttons button {
+        background: #ff9acb;
+        border: none;
+        padding: 0.8rem 1.6rem;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+
+      .buttons button:hover {
+        background: #ff6fb1;
+        transform: scale(1.05);
+      }
+
+      #result {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+      }
+
+      /* Background big couple photo */
+      .hero {
+        min-height: 100vh;
+        background: url("images/main.png") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 230, 240, 0.75);
+      }
+
+      .hero-content {
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+        max-width: 700px;
+      }
+
+      h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #4a1f3a;
+      }
+
+      .letter {
+        background: #fff;
+        margin: 4rem auto;
+        padding: 3rem 2rem;
+        max-width: 800px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .letter p {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Image sections */
+      .photo {
+        margin: 3rem 0;
+        text-align: center;
+      }
+
+      .photo img {
+        max-width: 90%;
+        border-radius: 20px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Cute characters */
+      .cute {
+        position: absolute;
+        width: 90px;
+        opacity: 0.9;
+      }
+
+      .hello-kitty {
+        top: -30px;
+        left: -30px;
+      }
+
+      .stitch {
+        bottom: -40px;
+        right: -30px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: #a65b89;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 16px 40px rgba(90, 42, 74, 0.25);
+        max-width: 700px;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        .letter {
+          padding: 2rem 1.5rem;
+        }
+      }
+
+      /* Hello Kitty cursor */
+      body {
+        cursor: url("cursor.png"), auto;
+      }
+
+      a,
+      button {
+        cursor: url("cursor.png"), pointer;
+      }
+    </style>
+  </head>
+  <script>
+    function sayYes() {
+      const result = document.getElementById("result");
+      result.innerHTML = `
+      <p><strong>Obviously 💕</strong></p>
+      <img src="images/yes_image.png" alt="Happy" style="max-width:300px;border-radius:20px;margin-top:1rem;">
+    `;
+    }
+
+    function sayNo() {
+      const result = document.getElementById("result");
+      result.innerHTML = "<p>Loading...</p>";
+
+      setTimeout(() => {
+        result.innerHTML = "<p><strong>Too late 😌</strong></p>";
+      }, 6000); // fake long wait (6 seconds)
+    }
+  </script>
+
+  <body>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-content hero-card">
+        <h1>Hello Honey~ 💕</h1>
+        <p>This is a little letter, but on a website, just for you.</p>
+      </div>
+    </section>
+
+    <!-- Letter section -->
+    <section class="letter">
+      <!-- Cute background characters -->
+      <img
+        src="images/hello-kitty.png"
+        class="cute hello-kitty"
+        alt="Hello Kitty"
+      />
+      <img src="images/stitch.png" class="cute stitch" alt="Stitch" />
+
+      <p>
+        I don’t even know where to start, because there’s so much I want to say,
+        but we have a long time to mention all of them and create even more. But
+        I want to start with our first picture together.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_1.jpg" alt="Memory 1" />
+      </div>
+
+      <p></p>
+
+      <p>
+        I was already in Geneva before I met you. I had walked its streets, seen
+        the lake, watched the Jet d’Eau rise and fall and it was really pretty.
+        I knew the cafés, the calm, the elegance, the quiet confidence of the
+        city. I thought I knew it well.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_2.jpg" alt="Memory 1" />
+      </div>
+      <p></p>
+
+      <p>
+        But then I met you. And suddenly, everything I thought I knew felt
+        incomplete. With you, Geneva became something else entirely. Streets I
+        had walked without thinking suddenly felt alive. Corners I had passed a
+        dozen times held meaning. Even the simplest moments—just being beside
+        you, talking, laughing, sharing silence—felt charged with something rare
+        and delicate. it felt like a whole new city.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_3.jpg" alt="Memory 2" />
+      </div>
+
+      <p>
+        And ofcourse I am not talking about the city *wink wink*. What amazes me
+        most is how little time it actually was. Just two months. On paper, it
+        sounds small, almost insignificant. But what we shared never felt small
+        to me. It felt deep, intentional, and real. It felt like something that
+        didn’t rush, yet somehow fit an vast amount of emotion into a short
+        space of time.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_4.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        You made ordinary moments unforgettable. You made a familiar city new.
+        You made time feel softer. I dont think i can pick a single moment that
+        stands out, because it was the whole experience of being with you that
+        made it so special. But still I'm gonna post some of our favourite
+        pictures together, because they are a reminder of how much we shared and
+        how much we created together in such a short time.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_5.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        The deep conversations, the quiet walks, the shared meals, the laughter,
+        the little jokes, the moments of vulnerability, the shyness, the
+        ignorance (dont thibk I'll forget it) the way we just existed together
+        in those moments—it all felt like something I had never experienced
+        before. It felt like a kind of magic that I didn’t want to end.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_6.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        But we both knew it's gonna take a diffferent turn when we both go to
+        different countries. I like to think it's the beginning of a new
+        chapter, which we can write in beautiful handwriting (mine is not so
+        good tbh).
+      </p>
+
+      <div class="photo">
+        <img src="images/image_7.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        I know we will have our ups and downs in future, but I also know that
+        communication is key, and with that we can fix everything. And you know
+        I am a patient man. (dont you think the oppposite).
+      </p>
+
+      <div class="photo">
+        <img src="images/image_8.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        This is the first letter, and for sure it’s not the last. I hope we can
+        keep sharing our thoughts, feelings, and memories in this way, even when
+        we are apart. Because even though we may be in different places, I want
+        you to feel close to me in every way possible. And if this letter can
+        help us do that, then it will have served its purpose.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_9.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        And most importantly, I want both of us to be keep laughing, teasing
+        each other, and enjoying the little things that make our relationship
+        special. Because at the end of the day, it’s those moments of joy and
+        connection that will keep us strong, no matter where we are in the
+        world.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_11.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        Always know that i am always just a text and a phone call away. Anytime
+        you feel weird or just want to talk, I am here. I care about you and I
+        want to be there for you, even if we are not physically together. So
+        please don’t hesitate to reach out whenever you need to and I'll do the
+        same.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_12.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        Let's see each other soon in Japan, and create even more beautiful
+        memories together. I am really looking forward to that day, and I hope
+        it comes sooner than we think.
+      </p>
+
+      <div class="photo">
+        <img src="images/image_13.jpg" alt="Memory 3" />
+      </div>
+
+      <p>
+        Until then, take care of yourself honey, I'll check up on you everyday
+        obviously and ask the same question "How was your day", beacuse its the
+        core of all conversations and I want to know how you are doing, what you
+        are thinking, and how you are feeling, even if it's just through words
+        on a screen. I like you and I know it's gonna grow more and more. (I'm
+        obviously the red one). Last but not least, would you like to be my
+        valentine?
+      </p>
+
+      <div class="photo">
+        <img src="images/last_new.png" alt="Memory 3" />
+      </div>
+
+      <div class="valentine">
+        <h2>So… would you like to be my Valentine? 💘</h2>
+
+        <div class="buttons">
+          <button onclick="sayYes()">Yes 💖</button>
+          <button onclick="sayNo()">No 🙄</button>
+        </div>
+
+        <div id="result"></div>
+      </div>
+    </section>
+
+    <footer>Made with love, just for you ✨</footer>
+  </body>
+</html>
